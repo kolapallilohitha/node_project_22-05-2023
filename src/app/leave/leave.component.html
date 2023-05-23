@@ -1,0 +1,129 @@
+<div class="mt-2">
+    <section class="intro">
+        <div class="col-md-12 border shadow-box" style="border-radius: 10px;">
+            <div class="d-flex justify-content-between" style="padding: 20px 44px;">
+                <h3>Leave Request</h3>
+                <button
+                    style="background-color: #0080ff; border-radius: 5px; height: 31px; padding: 0px 15px; color: white; font-weight: 600;"
+                    class="btn-sm border mt-1">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="15" height="16" fill="white"
+                        class="bi bi-plus-circle-fill" viewBox="0 0 16 16">
+                        <path
+                            d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.5 4.5a.5.5 0 0 0-1 0v3h-3a.5.5 0 0 0 0 1h3v3a.5.5 0 0 0 1 0v-3h3a.5.5 0 0 0 0-1h-3v-3z" />
+                    </svg>
+                    Add Leave
+                </button>
+            </div>
+            <div style="padding: 20px 44px;">
+                <form action="" [formGroup]="leaveDetails">
+                    <div class="row d-flex justify-content-between">
+                        <div class="col-md-6 mt-2">
+                            <label>Employee Name</label>
+                            <input type="text" class="form-control rounded-0" placeholder="Employee Name"
+                                formControlName="employeename">
+                        </div>
+                        <div class="col-md-6 mt-2">
+                            <label>Leave Type</label>
+                            <select class="form-select rounded-0" formControlName="leavetype">
+                                <option value="">Leave Type</option>
+                                <option value="Casual Leave ">Casual Leave</option>
+                                <option value="Sick Leave">Sick Leave</option>
+                                <option value="Earned Leave">Earned Leave</option>
+                                <option value="Peternity Leave">Peternity Leave</option>
+                                <option value="Maternity Leave">Maternity Leave</option>
+
+                            </select>
+                        </div>
+                        <div class="col-md-6 mt-2">
+                            <label>From Date</label>
+                            <input required="" type="text" class="form-control rounded-0" placeholder="From Date"
+                                formControlName="fromdate" onfocus="(this.type='date')" />
+                        </div>
+                        <div class="col-md-6 mt-2">
+                            <label>To Date</label>
+                            <input required="" type="text" class="form-control rounded-0" placeholder=" To Date"
+                                formControlName="todata" onfocus="(this.type='date')" />
+                        </div>
+
+                        <div class="col-md-6 mt-2">
+                            <label>Leave Status</label>
+                            <select class="form-select rounded-0" formControlName="leavestatus">
+                                <option disabled>Leave Status</option>
+                                <option value="Appoved">Appoved</option>
+                                <option value="Pending">Pending</option>
+                                <option value="Rejected">Rejected</option>
+                            </select>
+                        </div>
+                        <div class="col-md-6 mt-2">
+                            <label>Reason</label>
+                            <textarea type="text" class="form-control rounded-0" placeholder="Reason" cols="10" rows="1"
+                                formControlName="reason"></textarea>
+                        </div>
+                        <div class="col-md-6 mt-2">
+                            <label>Reporting Manager</label>
+                            <select class="form-select rounded-0" formControlName="leavetype">
+                                <option disabled>Leave Type</option>
+                                <option value="Casual Leave ">Development Team Manager</option>
+                                <option value="Sick Leave"></option>
+                                <option value="Earned Leave">Earned Leave</option>
+                                <option value="Peternity Leave">Peternity Leave</option>
+                                <option value="Maternity Leave">Maternity Leave</option>
+
+                            </select>
+                        </div>
+                        <div class=" mt-2 text-end">
+                            <button class="btn btn-success rounded-circle" (click)="submit()">Submit</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="mask d-flex align-items-center h-100">
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-12">
+                            <div class="card-body">
+                                <div class="table-responsive">
+                                    <div *ngIf="leave.length === 0">
+                                        <img class="nodata-found" src="../../assets/images/nodatafound.png" alt="">
+                                    </div>
+                                    <table class="table table-borderless mb-0" *ngIf="leave.length != 0">
+                                        <thead>
+                                            <tr>
+                                                <th scope="col">Employee Name</th>
+                                                <th scope="col">Leave Type</th>
+                                                <th scope="col">Leave Stutus</th>
+                                                <th scope="col">From Date</th>
+                                                <th scope="col">To Date</th>
+                                                <th scope="col">Reason</th>
+                                                <th scope="col">No Of Days</th>
+                                                <th scope="col">Actions</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr *ngFor="let item of leave">
+                                                <td>{{item.employeename}}</td>
+                                                <td>{{item.leavetype}}</td>
+                                                <td>
+                                                    <span
+                                                        [ngClass]="{'green': item.leavestatus === 'Appoved' ,'red': item.leavestatus === 'Rejected', 'yellow':item.leavestatus === 'Pending'}">{{item.leavestatus}}</span>
+                                                </td>
+                                                <td>{{item.fromdate}}</td>
+                                                <td>{{item.todata}}</td>
+                                                <td>{{item.reason}}</td>
+                                                <td></td>
+                                                <td>
+                                                    <button class="btn btn-warning btn-sm"><i class="fa fa-pencil"></i></button>
+                                                    <button class="btn btn-danger btn-sm ms-2"><i class="fa fa-trash"></i></button>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>

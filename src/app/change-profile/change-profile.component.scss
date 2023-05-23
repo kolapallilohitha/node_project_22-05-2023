@@ -1,0 +1,80 @@
+
+// .header{
+//     padding: 0px 30px;
+// }
+
+table td,
+table th {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.edit{
+  font-size: 26px !important;
+  margin-top: 8px;
+}
+.h2{
+  font-weight: bold;
+  font-size: 20px;
+}
+.h3{
+  font-size: 15px;
+  color: rgb(58, 98, 244);
+}
+
+.card {
+  border-radius: .5rem;
+}
+
+.image{
+  width: 108px;
+  height: 100px;
+  border-radius: 50%;
+}
+
+.name{
+  margin-top: 39px;
+  margin-left: 19px;
+}
+
+.tab {
+  display: flex;
+  justify-content: center;
+}
+
+.tab button {
+  background-color: #fff;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 10px 20px;
+  margin: 0 10px;
+  font-size: 16px;
+}
+
+.tab button.active {
+  background-color: #ddd;
+}
+
+.tabcontent {
+  display: none;
+  padding: 20px;
+}
+
+.tabcontent.show {
+  display: block;
+}
+
+
+// .mask-custom {
+//   background: rgba(24, 24, 16, .2);
+//   border-radius: 2em;
+//   backdrop-filter: blur(25px);
+//   border: 2px solid rgba(255, 255, 255, 0.05);
+//   background-clip: padding-box;
+//   box-shadow: 10px 10px 10px rgba(46, 54, 68, 0.03);
+// // }
+
+h5{
+  font-size: 15px;
+}

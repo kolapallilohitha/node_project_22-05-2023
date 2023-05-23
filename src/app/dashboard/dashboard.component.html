@@ -1,0 +1,179 @@
+<!-- <div class="col-md-12 border shadow-box" style="border-radius: 10px;">
+<h3 class="container">ADMIN DASHBOARD</h3>
+</div> -->
+
+
+
+<!-- <div align="right" class="fullscreen shadow-box container-fluid horinav">
+    <a (click)="toggleFullScreen()" style="margin-right: 14px;">
+        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="50" fill="currentColor" class="bi bi-fullscreen"
+            viewBox="0 0 16 16">
+            <path
+                d="M1.5 1a.5.5 0 0 0-.5.5v4a.5.5 0 0 1-1 0v-4A1.5 1.5 0 0 1 1.5 0h4a.5.5 0 0 1 0 1h-4zM10 .5a.5.5 0 0 1 .5-.5h4A1.5 1.5 0 0 1 16 1.5v4a.5.5 0 0 1-1 0v-4a.5.5 0 0 0-.5-.5h-4a.5.5 0 0 1-.5-.5zM.5 10a.5.5 0 0 1 .5.5v4a.5.5 0 0 0 .5.5h4a.5.5 0 0 1 0 1h-4A1.5 1.5 0 0 1 0 14.5v-4a.5.5 0 0 1 .5-.5zm15 0a.5.5 0 0 1 .5.5v4a1.5 1.5 0 0 1-1.5 1.5h-4a.5.5 0 0 1 0-1h4a.5.5 0 0 0 .5-.5v-4a.5.5 0 0 1 .5-.5z" />
+        </svg>
+    </a>
+</div> -->
+<div class="container-fluid">
+    <div class="p-12">
+        <div class="row">
+            <div class="col-md-8">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="card shadow-box">
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between">
+                                    <div class="mt-1">
+                                        <p class="fw-bold ">Total Employees</p>
+                                        <h3>800</h3>
+                                        <div>
+                                            <i class='far fa-arrow-alt-circle-up' style='font-size:18px'></i>
+                                            <span>.80% inc</span>
+                                        </div>
+                                    </div>
+                                    <div class="">
+                                        <p class="text-end"><i class="fa fa-ellipsis-h" style="font-size:18px"></i></p>
+                                        <circle-progress [percent]="85" [radius]="34" [outerStrokeWidth]="7"
+                                            [innerStrokeWidth]="7" [outerStrokeColor]="'#4882c2'"
+                                            [innerStrokeColor]="'#d3d7df'" [animation]="true" [animationDuration]="300"
+                                            [titleFontSize]="19" [unitsFontSize]="14" [space]="-7"
+                                            [titleFontWeight]="600" [showInnerStroke]="true" [clockwise]="true">
+                                        </circle-progress>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card shadow-box">
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between">
+                                    <div class="mt-1">
+                                        <p class="fw-bold">Today's Attendence</p>
+                                        <h3>800</h3>
+                                        <div>
+                                            <i class='far fa-arrow-alt-circle-up' style='font-size:18px'></i>
+                                            <span>.80% inc</span>
+                                        </div>
+                                    </div>
+                                    <div class="">
+                                        <p class="text-end"><i class="fa fa-ellipsis-h" style="font-size:18px"></i></p>
+                                        <circle-progress [percent]="85" [radius]="36" [outerStrokeWidth]="7"
+                                            [innerStrokeWidth]="7" [outerStrokeColor]="'#ff9500'"
+                                            [innerStrokeColor]="'#d3d7df'" [animation]="true" [animationDuration]="300"
+                                            [titleFontSize]="19" [unitsFontSize]="14" [space]="-7"
+                                            [titleFontWeight]="600" [showInnerStroke]="true" [clockwise]="true">
+                                        </circle-progress>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card shadow-box">
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between">
+                                    <div class="mt-1">
+                                        <p class="fw-bold">Number Of Leaves</p>
+                                        <h3>800</h3>
+                                        <div>
+                                            <i class='far fa-arrow-alt-circle-up' style='font-size:18px'></i>
+                                            <span>.80% inc</span>
+                                        </div>
+                                    </div>
+                                    <div class="">
+                                        <p class="text-end"><i class="fa fa-ellipsis-h" style="font-size:18px"></i></p>
+                                        <circle-progress [percent]="75" [radius]="36" [outerStrokeWidth]="7"
+                                            [innerStrokeWidth]="7" [outerStrokeColor]="'#4882c2'"
+                                            [innerStrokeColor]="'#d3d7df'" [animation]="true" [animationDuration]="300"
+                                            [titleFontSize]="19" [unitsFontSize]="14" [space]="-7"
+                                            [titleFontWeight]="600" [showInnerStroke]="true" [clockwise]="true">
+                                        </circle-progress>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mt-3">
+                        <div class="card shadow-box">
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between">
+                                    <h5>Project Overview</h5>
+                                    <p><a href="#" class="text-decoration-none">View All</a></p>
+                                </div>
+                                <div>
+                                    <h3>224</h3>
+                                    <p class="text-success">17% <span>($20.20)</span></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mt-3">
+                        <div class="card shadow-box">
+                            <div class="card-body">
+                                <h5>Job Statistics</h5>
+                                <div class="mt-2 mx-3">
+                                    <canvas baseChart width="100" height="50" [datasets]="barChartData"
+                                        [labels]="barChartLabels" [options]="barChartOptions"
+                                        [plugins]="barChartPlugins" [legend]="barChartLegend" [colors]="barColors"
+                                        [chartType]="barChartType">
+                                    </canvas>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card shadow-box">
+                    <div class="card-body">
+                        <h5>Job Vehecancy Summary</h5>
+                        <div class="mt-4">
+                            <select class="form-select">
+                                <option value="select team">select team</option>
+                                <option value="Design team">Design team</option>
+                                <option value="Development team">Development team</option>
+                                <option value="Testing team">Testing team</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="mt-3">
+        <div class="row">
+            <div class="col-md-8">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="mt-3 d-flex justify-content-between">
+                            <div class="d-flex">
+                                <h4>My Task</h4>
+                                <select class="rounded text-info border-info mx-3">
+                                    <option value="">Yesterday</option>
+                                    <option value="">Today</option>
+                                    <option value="">tommorrow</option>
+
+                                </select>
+                            </div>
+                            <div>
+                                <button class="btn border-info text-info ">Add Task +</button>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="mt-3 d-flex justify-content-between">
+                            <h4>Employee</h4>
+                            <p><a href="" class="text-decoration-none text-info">View All</a></p>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
